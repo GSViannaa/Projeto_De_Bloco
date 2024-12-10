@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/estilos/styleNavbar.css" />
+    <link rel="stylesheet" href="/estilos/styleAnimalsPage.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=account_circle,arrow_back,arrow_upward_alt,chevron_left,chevron_rigth,close,filter_list,shopping_cart"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="page">
+      <header >
+        <a href="/indexs/index_homePage.html"> <img src="/imgs/image_1_1.png" style="width: 200px; cursor: pointer; height: 140px;" alt="logo" /></a>
+        <div id="buttonLogar" onclick="loginShow()">Log in</div>
+
+        <div id="dropdownMenu">
+          <span class="material-symbols-outlined" onclick="toggleDropdown()" style="font-size: 40px;"> account_circle </span>
+          <div class="dropdownConteudo">
+            <ul>
+              <li><a href="">Conta</a></li>
+              <li><a href="/indexs/index_carrinhoPage.html">Carrinho</a></li>
+              <li id="adminItem"><a href="/indexs/index_areaAdmin.html">Administrar</a></li>
+              <li onclick="logOut()">Sair</li>
+            </ul>
+          </div>
+        </div>
+        
+      </header>
+      <div id="bg"></div>
+      <main>
+        <div id="goBack" onclick="history.back()">
+          
+            <span class="material-symbols-outlined">
+          arrow_back
+          </span>
+        </div>
+        <div id="paraLogin">
+          <div class="imgLogoLogin">
+            <img src="/imgs/logoCirculo.png" alt="logo" style="object-fit: contain;" width="450px" />
+            <p>Exotic Pets</p>
+          </div>
+
+          <section class="paraDados">
+            
+              <span class="material-symbols-outlined" onclick="loginShow()"> close </span>
+            
+            <input
+              type="text"
+              placeholder="E-mail"
+              class="textoDados"
+              id="emailLogin"
+            />
+            <input
+              type="password"
+              placeholder="Senha"
+              class="textoDados"
+              id="senhaLogin"
+            />
+
+            <div id="buttonFazerLogin" onclick="login()">Fazer login</div>
+            <p id="semConta" onclick="cadastro()">
+              Ainda não tem uma conta? <br />
+              CLIQUE AQUI
+            </p>
+          </section>
+        </div>
+
+        <div id="paraCadastro">
+          <div class="imgLogoLogin">
+            <img src="/imgs/logoCirculo.png" alt="logo" style="object-fit: contain;" width="450px" />
+            <p>Exotic Pets</p>
+          </div>
+
+          <section class="paraDados">
+            <div class="fecharLogin" onclick="loginShow()">
+              <span class="material-symbols-outlined"> close </span>
+            </div>
+            <input
+              type="text"
+              placeholder="Nome completo"
+              class="textoDados"
+              id="nome"
+            />
+            <input
+              type="text"
+              placeholder="E-mail"
+              class="textoDados"
+              id="email"
+            />
+            <input
+              type="password"
+              placeholder="Senha"
+              class="textoDados"
+              id="senha"
+            />
+
+            <label for="admin">Conta administrativa</label>
+            <input type="checkbox" id="admin" />
+            <div id="buttonSalvarConta" onclick="salvarLocalStorage()">
+              Cadastrar
+            </div>
+          </section>
+        </div>
+
+        <div id="buttonGoTop" onclick="goTop()">
+          <span class="material-symbols-outlined">
+            arrow_upward_alt
+            </span>
+        </div>
+        
+
+        <div id="pagesTransitions">
+          <ul>
+            <li><a href="/indexs/index_animalsPage.html">Animais</a></li>
+            <li><a href="/indexs/index_produtosPage.html">Produtos</a></li>
+            <li><a href=""></a>Feedbacks</li>
+          </ul>
+        </div>
+        <div id="introducaoAnimais">
+          <section>
+            <h2 class="title">
+              Exotic Pets: <br />
+              Especialistas em Animais Exóticos
+            </h2>
+            <br /><br />
+            <p>
+              Na Exotic Pets, você encontra uma seleção de animais exóticos que
+              podem ser legalmente adotados, perfeitos para quem busca um
+              companheiro único e fascinante. Com espécies cuidadosamente
+              selecionadas como furões, jiboias arco-íris, axolotes e cacatuas,
+              nossa loja oferece opções para todos os perfis de amantes de pets
+              incomuns.
+            </p>
+            <br /><br />
+            <p>
+              Cada animal em nossa loja é legalizado e vem com a documentação
+              exigida pelas normas vigentes. Nosso compromisso é com a posse
+              responsável e a segurança de cada tutor e pet. Fornecemos
+              orientação completa sobre os cuidados necessários para cada
+              espécie desde habitat e alimentação até comportamento e saúde.
+            </p>
+            <br />
+            <br />
+            <p>
+              Ao escolher a Exotic Pets, você está optando por uma relação ética
+              e segura com seu novo amigo exótico. Venha nos visitar e conheça o
+              mundo dos animais exóticos com uma equipe pronta para tornar sua
+              experiência de adoção completa e satisfatória!
+            </p>
+          </section>
+          <div id="borda"><div alt="lagarto gecko" title="lagarto gecko"></div></div>
+        </div>
+
+        <span class="linhaHz"></span> 
+        <div id="buttonGoTop" onclick="goTop()">
+            <span class="material-symbols-outlined">
+              arrow_upward_alt
+              </span>
+          </div>
+          <section id="pesquisaEfiltro">
+            <h2 class="title" style="font-size: 50px;">animais</h2>
+            
+            <input type="text" id="pesquisa" placeholder="Ex:Lagarto Gecko...">
+            <div  id="buttonPesquisar" onclick="pesquisar()"> Pesquisar</div>
+            <section id="paraFiltro">
+              <span class="material-symbols-outlined"style="font-size: 40px; cursor: pointer;" onclick="filtroShow() ">filter_list</span>
+          
+              <div id="guardarFiltro">
+                <input type="checkbox" class="filtroCheckbox" id="ave" value="Ave"> <label for="ave">Ave</label>
+                <input type="checkbox" class="filtroCheckbox" id="reptil" value="Reptil"> <label for="reptil">Reptil</label>
+                <input type="checkbox" class="filtroCheckbox" id="anfibio" value="Anfíbio"> <label for="anfibio">Anfíbio</label>
+                <input type="checkbox" class="filtroCheckbox" id="mamifero" value="Mamífero"> <label for="mamifero">Mamífero</label>
+                <div onclick="filtrar()">filtrar </div>
+    
+              </div>
+            </section>
+
+           
+
+        
+          </section>
+        
+         
+
+          <section id="areaAnimais">
+
+            <div class="card is-loading">
+              <div class="imageCard"></div>
+              <div class="conteudoCard">
+                <h2></h2>
+                <p></p>
+              </div>
+            </div>
+
+          </section>
+
+          <span class="linhaHz"></span>
+
+
+      </main>
+    </div>
+    <script src="/scripts/scriptGoTop.js"></script>
+    <script src="/scripts/script_Cadastro.js"></script>
+    <script src="/scripts/script_AnimalPage.js"></script>
+  </body>
+</html>

@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/estilos/styleNavbar.css" />
+    <link rel="stylesheet" href="/estilos/styleHomePage.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=account_circle,arrow_back,arrow_upward_alt,chevron_left,chevron_rigth,close"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="page">
+      <header tabindex="0">
+        <img src="/imgs/image_1_1.png" style="width: 200px" height="140px"  alt="logo" />
+
+        <div id="buttonLogar" onclick="loginShow()">Log in</div>
+
+        <div id="dropdownMenu">
+         
+          <span class="material-symbols-outlined" onclick="toggleDropdown()" style="font-size: 40px; cursor: pointer;"> account_circle </span>
+          <div class="dropdownConteudo">
+
+            <ul>
+              <li><a href="">Conta</a></li>
+              <li><a href="/indexs/index_carrinhoPage.html">Carrinho</a></li>
+              <li id="adminItem"><a href="/indexs/index_areaAdmin.html">Administrar</a></li>
+              <li onclick="logOut()">Sair</li>
+            </ul>
+          </div>
+
+
+        </div>
+
+      </header>
+      
+      </section>
+      <div id="navContainer">
+        <div id="bg"></div>
+        <div class="button" tabindex="0" >
+          <span class="iconBar"></span>
+          <span class="iconBar"></span>
+          <span class="iconBar"></span>
+        </div>
+        <div id="contentNav">
+          <ul>
+            <li><a href="#titleSobreNos">Sobre nós</a></li>
+            <li><a href="#titleAnimais">Animais</a></li>
+            <li><a href="#produtos">Produtos</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <main>
+        <div id="sectionImgBackground">
+          <img
+            src="/imgs/logoCirculo.png"
+            style="width: 500px"
+            title="logo exotic pets"
+            alt="logo exotic pets"
+          />
+          | Exotic Pets
+        </div>
+
+        <div id="paraLogin">
+          <div class="imgLogoLogin">
+            <img src="/imgs/logoCirculo.png" alt="logo" style="object-fit: contain;" width="450px" />
+            <p>Exotic Pets</p>
+          </div>
+
+          <section class="paraDados">
+            
+              <span class="material-symbols-outlined" onclick="loginShow()"> close </span>
+            
+            <input
+              type="text"
+              placeholder="E-mail"
+              class="textoDados"
+              id="emailLogin"
+            />
+            <input
+              type="password"
+              placeholder="Senha"
+              class="textoDados"
+              id="senhaLogin"
+            />
+
+            <div id="buttonFazerLogin" onclick="login()">Fazer login</div>
+            <p id="semConta" onclick="cadastro()">
+              Ainda não tem uma conta? <br />
+              CLIQUE AQUI
+            </p>
+          </section>
+        </div>
+
+        <div id="paraCadastro">
+          <div class="imgLogoLogin">
+            <img src="/imgs/logoCirculo.png" alt="logo" style="object-fit: contain;" width="450px" />
+            <p>Exotic Pets</p>
+          </div>
+
+          <section class="paraDados">
+            <div class="fecharLogin" onclick="loginShow()">
+              <span class="material-symbols-outlined"> close </span>
+            </div>
+            <input
+              type="text"
+              placeholder="Nome de usuário"
+              class="textoDados"
+              id="nome"
+            />
+            <p class="textoAlerta">O nome tem que ter mais de quatro dígitos!</p>
+            <input
+              type="text"
+              placeholder="E-mail"
+              class="textoDados"
+              id="email"
+            />
+           <p class="textoAlerta">O E-mail tem que conter @!</p>
+            <input
+              type="password"
+              placeholder="Senha"
+              class="textoDados"
+              id="senha"
+            />
+          <p class="textoAlerta">O nome tem que ter mais de quatro dígitos!</p>
+
+            <label for="admin">Conta administrativa</label>
+            <input type="checkbox" id="admin" />
+            <div id="buttonSalvarConta" onclick="salvarLocalStorage()">
+              Cadastrar
+            </div>
+          </section>
+        </div>
+
+        <div id="buttonGoTop" onclick="goTop()">
+          <span class="material-symbols-outlined">
+            arrow_upward_alt
+            </span>
+        </div>
+        
+
+        <div id="pagesTransitions">
+          <ul>
+            <li><a href="/indexs/index_animalsPage.html">Animais</a></li>
+            <li><a href="/indexs/index_produtosPage.html">Produtos</a></li>
+            <li><a href=""></a>Feedbacks</li>
+          </ul>
+        </div>
+
+        <span class="linhaHz"></span>
+
+        <div id="titleSobreNos" class="title"><h2>Conheça um pouco de nós...</h2></div>
+        <section id="sobreNos">
+          <article class="textoSobreNos">
+            <p>
+            Bem-vindo à Exotic Pets, sua loja online especializada na venda de pets exóticos
+               e em suprimentos para cuidar deles com o carinho e a dedicação que merecem. <br> <br> Somos
+              apaixonados pelo mundo dos animais exóticos e acreditamos que cada um deles traz
+              uma experiência única e fascinante para quem os acolhe. </p> <br>
+
+              Na Exotic Pets, nosso compromisso vai além da venda. Estamos aqui para 
+              fornecer informações, suporte e as melhores opções do mercado para garantir
+              que você e seu pet tenham uma convivência harmoniosa e saudável. <br><br> Contamos 
+              com uma equipe apaixonada e especializada, pronta para ajudar em cada etapa 
+               dessa jornada. <br />
+            </p>
+          </article>
+          <div class="borda"><div id="imgSobreNos"></div></div>
+          <div class="borda"><div id="imgSobreNos2"></div></div>
+
+          <article class="textoSobreNos">
+            <p>
+              Acreditamos que cada animal merece um lar amoroso e responsável.
+              Por isso, além de alocar lojas confiáveis, também oferecemos
+              informações educativas sobre cuidados, habitats e necessidades
+              específicas de cada espécie. <br /> <br>
+
+              Nosso compromisso é promover uma comunidade de cuidadores
+              bem-informados e apaixonados, onde o amor pelos animais exóticos é
+              compartilhado e respeitado. <br /> <br>
+              Navegue pelo nosso site e descubra o lugar perfeito para encontrar
+              seu novo amigo de forma segura e consciente. <br /> <br>
+
+              <p style="text-decoration: underline #bb8828;">Junte-se a nós nessa jornada!</p>
+            </p>
+          </article>
+        </section>
+
+        <span class="linhaHz"></span>
+
+        <div class="title" id="titleAnimais" style="margin-top: 100px"><h2>Animais</h2></div>
+        <section id="animais">
+          <article class="animaisTexto">
+            <p>
+              Animais exóticos podem trazer um toque especial à vida de quem
+              decide tê-los como pets. Entre as opções, os furões são adoráveis
+              e brincalhões, conhecidos por sua personalidade curiosa e
+              sociável. <br><br> As cobras, como a piton bola, também são populares,
+              oferecendo um visual fascinante e, com os cuidados certos, podem
+              ser ótimas companheiras.
+            </p>
+          </article>
+
+          <div class="borda"><div id="imgAnimal"></div></div>
+
+         
+        </section>
+        <div class="title" style="margin-top: 100px">
+          <h2>Veja alguns dos nossos Pets</h2>
+        </div>
+        <div id="acessoAnimais">
+          <section id="scrollImg">
+            <div id="prev" class="buttonSlider">
+              <span class="material-symbols-outlined">chevron_left</span>
+            </div>
+
+            <div id="slider-container">
+              <div
+                class="imgScrollAnimals"
+                style="background-image: url(/imgs/suindara2.jpg)"
+              ></div>
+              <div
+                class="imgScrollAnimals"
+                style="background-image: url(/imgs/Salamandra-Axolote.jpg)"
+              ></div>
+              <div
+                class="imgScrollAnimals"
+                style="background-image: url(/imgs/furao-estimacao.jpg)"
+              ></div>
+              <div
+                class="imgScrollAnimals"
+                style="background-image: url(/imgs/jiboia.jpg)"
+              ></div>
+              <div
+                class="imgScrollAnimals"
+                style="background-image: url(/imgs/Cacatuac.jpg)"
+              ></div>
+            </div>
+
+            <div id="next" class="buttonSlider">
+              <span class="material-symbols-outlined">chevron_right</span>
+            </div>
+          </section>
+
+          <div id="descricaoAnimais">
+            <div class="animaisDescricaoTexto">
+              <h2>Coruja Suindara</h2>
+              <p>
+                <h3>Família:</h3> Tytonidae <br> <br>
+                <h3>Expectativa de Vida:</h3> 15 a 20 anos emcativeiro; 4 a 6 anos na natureza. <br /> <br>
+                <h3>Características Físicas:</h3> Tamanho entre 33 a 39 cm e peso de 430 a 620 g. <br /> <br>
+                <h3>Distribuição e Habitat:</h3> Presente em todos os continentes, exceto na Antártida; habita áreas rurais e urbanas <br /> <br>
+                <h3>Comportamento e Hábitos:</h3> Alimenta-se de roedores e pequenos vertebrados, com hábitos noturnos. <br /> <br>
+                <h3>Curiosidade:</h3> Disco facial em forma de coração para ajudar naaudição. <br /> <br>
+              </p>
+            </div>
+            <div class="animaisDescricaoTexto">
+              <h2>Axalote</h2>
+              
+              <h3>Família:</h3> Ambystomatidae   <br> <br>
+              <h3>Expectativa de Vida:</h3> 10 a 15 anos. <br /> <br>
+              <h3>Características Físicas:</h3> Chega a 30 cm de comprimento, com coloração que varia de rosa claro a marrom escuro. <br /> <br>
+              <h3>Distribuição e Habitat:</h3> Nativo dos lagos de Xochimilco, no México. <br /> <br>
+              <h3>Comportamento e Hábitos:</h3> Aquático e carnívoro, alimenta-se de pequenos invertebrados e peixes. <br /> <br>
+              <h3>Curiosidade:</h3> Famoso por sua habilidade única de regenerar membros, órgãos e até partes do cérebro. <br /> <br>
+
+            </div>
+            <div class="animaisDescricaoTexto">
+              <h2>Furão</h2>
+
+              <h3>Família:</h3> Mustelidae   <br> <br>
+              <h3>Expectativa de Vida:</h3> 6 a 10 anos em cativeiro. <br /> <br>
+              <h3>Características Físicas:</h3> Corpo longo, entre 40 a 50 cm de comprimento e peso de 0,7 a 2 kg. <br /> <br>
+              <h3>Distribuição e Habitat:</h3> Originalmente da Europa, agora encontrado em diversos habitats ao redor do mundo, especialmente em lares como animais de estimação. <br /> <br>
+              <h3>Comportamento e Hábitos:</h3> Animal ativo e curioso, conhecido por escavar e explorar ambientes. <br /><br>
+              <h3>Curiosidade:</h3> Furões são excelentes caçadores de roedores e frequentemente utilizados na caça de coelhos na Europa. <br /> <br>
+              
+            </div>
+            <div class="animaisDescricaoTexto">
+              <h2>Jiboia Arco-íris</h2>
+
+              <h3>Família:</h3> Boidae  <br> <br>
+              <h3>Expectativa de Vida:</h3> 20 a 30 anos em cativeiro. <br /> <br>
+              <h3>Características Físicas:</h3> Pode medir até 3 metros de comprimento, com escamas iridescentes que refletem cores brilhantes. <br /> <br>
+              <h3>Distribuição e Habitat:</h3> Nativa da América do Sul, encontrada em florestas tropicais. <br /> <br>
+              <h3>Comportamento e Hábitos:</h3> Noturna e arbórea, alimenta-se de pequenos mamíferos, aves e répteis. <br /> <br>
+              <h3>Curiosidade:</h3> Sua coloração vibrante vem do brilho das escamas que refletem a luz, criando um efeito arco-íris. <br /> <br>
+
+            </div>
+            <div class="animaisDescricaoTexto">
+              <h2>Cacatua</h2>
+
+              <h3>Família:</h3> Cacatuidae   <br> <br>
+              <h3>Expectativa de Vida:</h3> 40 a 60 anos em cativeiro. <br /> <br>
+              <h3>Características Físicas:</h3> Tamanho médio a grande, com penas brancas ou coloridas e uma crista na cabeça. <br /> <br>
+              <h3>Distribuição e Habitat:</h3> Nativa da Austrália, Indonésia e algumas ilhas do Pacífico. <br /> <br>
+              <h3>Comportamento e Hábitos:</h3> Muito sociável e inteligente, gosta de interagir com seres humanos e outros animais. <br /> <br>
+              <h3>Curiosidade:</h3> Conhecida por sua habilidade de imitar sons e até palavras humanas. <br /> <br>
+              
+            </div>
+          </div>
+
+        </div>
+          <div id="animalsPageButton"><a href="/indexs/index_animalsPage.html">Veja todos</a></div>
+        <span class="linhaHz"></span>
+        <div class="title" style="margin-top: 100px">
+          <h2>Produtos</h2>
+        </div>
+        <section id="produtos">
+          <div class="borda"><div id="imgProduto" alt="viveiro" title="viveiro"></div></div>
+          <article class="animaisTexto"> 
+            <p>Seu pet exótico merece o melhor, e nós temos tudo o que você
+              precisa para cuidar dele com carinho e qualidade. Em nosso site, 
+              você encontra alimentos especializados, viveiros, aquários e 
+              acessórios para garantir um ambiente saudável e confortável para seu amigo.
+              Oferecemos produtos de alta qualidade para répteis, aves, peixes e mamíferos exóticos, 
+              tudo pensado para o bem-estar do seu pet. Frete rápido, atendimento especializado e variedade para todas as 
+              necessidades do seu companheiro único.
+          </p>
+        </article>
+        </section>
+        <div class="title" style="margin-top: -150px">
+          <h3>Mais procurados</h3>
+        </div>
+
+        <section id="carrossel">
+
+          <div class="divPrincipal">
+           <div class="produtoShow" style="background-image: url(/imgs/furaoCama.jpg);"></div>
+           <article>
+            <h2>Cama morango</h2>
+            <article class="produtoDescricao">
+              <p><strong style="text-decoration: underline; text-decoration-color:#bb8828;">Descrição:</strong> <br>Confortável cama temática para furões, com tecido macio e design aconchegante.</p> <br>
+              <p><strong style="text-decoration: underline; text-decoration-color:#bb8828;">Preço:</strong> <br>R$ 120,00</p> <br> 
+              <p><strong style="text-decoration: underline; text-decoration-color:#bb8828;">Para:</strong> <br>Mamíferos</p> <br>
+          </article>
+        
+            </article>
+          </div>
+        <section id="subgrid">
+          <div class= "divsProdutos">
+            <div class="miniProdutoShow" style="background-image: url(/imgs/aquario.webp)"></div>
+            <h2>Aquario</h2>
+            <article class="produtoDescricao">
+              <p><strong style="text-decoration: underline; text-decoration-color:#bb8828;">Descrição:</strong>  <br>Tanque de vidro resistente, ideal para peixes ou pequenos répteis, com excelente visibilidade.</p> <br>
+              <p><strong style="text-decoration: underline; text-decoration-color:#bb8828;">Preço:</strong> <br> R$ 350,00</p> <br>
+              <p><strong style="text-decoration: underline; text-decoration-color:#bb8828;">Para:</strong> <br> Anfíbios</p>
+          </article>
+          </div>
+          
+          <div class= "divsProdutos">
+            <div class="miniProdutoShow" style="background-image: url(/imgs/suplemento_vitaminico.webp)"></div>
+            <h2>Vitaminas Avitrini</h2>
+            <article class="produtoDescricao">
+              <p><strong style="text-decoration: underline; text-decoration-color:#bb8828;">Descrição:</strong > <br> Suplemento nutricional completo, melhora saúde e plumagem de corujas.</p><br>
+              <p><strong style="text-decoration: underline; text-decoration-color:#bb8828;">Preço:</strong>  <br>R$ 75,00</p> <br> 
+              <p><strong style="text-decoration: underline; text-decoration-color:#bb8828;">Para:</strong> <br> Aves</p>
+          </article>
+
+          </div>
+          
+          <div class= "divsProdutos">
+            <div class="miniProdutoShow" style="background-image: url(/imgs/gaiola.jpg);"></div>
+            <h2>Gaiola aberta</h2>
+            <article class="produtoDescricao">
+              <p><strong style="text-decoration: underline; text-decoration-color:#bb8828;">Descrição:</strong>  <br> Gaiola espaçosa e arejada, ideal para aves, com acesso fácil para manutenção.</p> <br>
+              <p><strong style="text-decoration: underline; text-decoration-color:#bb8828;">Preço:</strong> <br> R$ 200,00</p> <br>
+              <p><strong style="text-decoration: underline; text-decoration-color:#bb8828;">Para:</strong>  <br>Aves</p> 
+          </article>
+
+          </div>
+          
+          <div class= "divsProdutos">
+            <div class="miniProdutoShow" style="background-image: url(/imgs/viveiro.webp)"></div>
+            <h2>Serpentarium</h2>
+            <article class="produtoDescricao">
+              <p><strong style="text-decoration: underline; text-decoration-color:#bb8828;">Descrição:</strong> <br>Habitat seguro e ventilado para serpentes, com espaço adequado e fechos seguros.</p> <br>
+              <p><strong style="text-decoration: underline; text-decoration-color:#bb8828;">Preço:</strong> <br> R$ 600,00</p> <br>
+              <p><strong style="text-decoration: underline; text-decoration-color:#bb8828;">Para:</strong>  <br>Répteis</p>
+          </article>
+
+          </div>
+
+        </section>
+        </section>
+        <div id="animalsPageButton" style="margin-top: 40px;"><a href="/indexs/index_produtosPage.html">Ver todos</a></div>
+
+        <span class="linhaHz"></span>
+       
+      </main>
+      <footer>Telefones: (99) 9999-9999 | (99) 8888-8888  -  E-mail: Exotic.pets@gmail.com | Exotic.pets.suporte@gmail.com </footer>
+
+    </div>
+    <script src="/scripts/script_Cadastro.js"></script>
+    <script src="/scripts/script_Slider.js"></script>
+    <script src="/scripts/scriptGoTop.js"></script>
+  </body>
+</html>

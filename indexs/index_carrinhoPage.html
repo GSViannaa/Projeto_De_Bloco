@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/estilos/styleNavbar.css" />
+    <link rel="stylesheet" href="/estilos/styleCarrinhoPage.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=account_circle,arrow_back,arrow_upward_alt,chevron_left,chevron_rigth,close"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="page">
+      <header tabindex="0">
+        <a href="/indexs/index_homePage.html"> <img src="/imgs/image_1_1.png" onclick="goToHomePage()" style="width: 200px; cursor: pointer;" alt="logo" /></a>
+        <div id="buttonLogar" onclick="loginShow()">Log in</div>
+
+        <div id="dropdownMenu">
+         
+          <span class="material-symbols-outlined" onclick="toggleDropdown()" style="font-size: 40px;"> account_circle </span>
+          <div class="dropdownConteudo">
+            <ul>
+              <li><a href="">Conta</a></li>
+              <li><a href="">Carrinho</a></li>
+              <li id="adminItem"><a href="/indexs/index_areaAdmin.html">Administração</a></li>
+              <li onclick="logOut()"><a href="/indexs/index_homePage.html">Sair</a></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+        <main>
+          <div id="goBack" onclick="history.back()">
+              <span class="material-symbols-outlined">
+            arrow_back
+            </span>
+            
+          </div>
+            <div id="buttonGoTop" onclick="goTop()">
+              <span class="material-symbols-outlined">
+                arrow_upward_alt
+                </span>
+            </div>
+            <div id="pagesTransitions">
+              <ul>
+                <li><a href="/indexs/index_animalsPage.html">Animais</a></li>
+                <li><a href="/indexs/index_produtosPage.html">Produtos</a></li>
+                <li><a href=""></a>Feedbacks</li>
+              </ul>
+            </div>
+
+            <div id="carrinhoShow">
+              <section id="itensNoCarrinho">
+                <h2 class="title" style="margin-left: 80px;">Itens no carrinho</h2>
+                <ul id="lista"></ul>
+                <ul id="listaQuantidade"></ul>
+              </section>
+              <section id="precoCompra">
+                <h2 class="title" style="margin-left: 150px;">Soma total</h2>
+                <ul id="listaPrecoUni"></ul>
+                <ul id="listaVezesQuanti"></ul>
+
+                <p class="title" >Valor Total:<p class="title" id="PrecoFinal"></p></p>
+
+                <div id="finalizar"onclick="finalizarCompar()">Finalizar Compra</div>
+                
+              </section>
+            </div>
+
+    
+           
+
+        </main>
+    </div>
+        <script src="/scripts/script_CarrinhoPage.js"></script>
+        <script src="/scripts/script_Cadastro.js"></script>
+        <script src="/scripts/scriptGoTop.js"></script>
+      </body>
+      </html>

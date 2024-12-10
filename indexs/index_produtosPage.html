@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/estilos/styleNavbar.css" />
+    <link rel="stylesheet" href="/estilos/styleProdutosPage.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=account_circle,arrow_back,arrow_upward_alt,chevron_left,chevron_rigth,close,filter_list"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="page">
+      <header >
+        <a href="/indexs/index_homePage.html"> <img src="/imgs/image_1_1.png" style="width: 200px; cursor: pointer; height: 140px;" alt="logo" /></a>
+        <div id="buttonLogar" onclick="loginShow()">Log in</div>
+
+        <div id="dropdownMenu">
+          <span class="material-symbols-outlined" onclick="toggleDropdown()" style="font-size: 40px;"> account_circle </span>
+          <div class="dropdownConteudo">
+            <ul>
+              <li><a href="">Conta</a></li>
+              <li><a href="/indexs/index_carrinhoPage.html">Carrinho</a></li>
+              <li id="adminItem"><a href="/indexs/index_areaAdmin.html">Administrar</a></li>
+              <li onclick="logOut()">Sair</li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div id="bg"></div>
+      <main>
+        <div id="goBack" onclick="history.back()">
+          
+            <span class="material-symbols-outlined">
+          arrow_back
+          </span>
+        </div>
+        <div id="paraLogin">
+          <div class="imgLogoLogin">
+            <img src="/imgs/logoCirculo.png" alt="logo" style="object-fit: contain;" width="450px" />
+            <p>Exotic Pets</p>
+          </div>
+
+          <section class="paraDados">
+            
+              <span class="material-symbols-outlined" onclick="loginShow()"> close </span>
+            
+            <input
+              type="text"
+              placeholder="E-mail"
+              class="textoDados"
+              id="emailLogin"
+            />
+            <input
+              type="password"
+              placeholder="Senha"
+              class="textoDados"
+              id="senhaLogin"
+            />
+
+            <div id="buttonFazerLogin" onclick="login()">Fazer login</div>
+            <p id="semConta" onclick="cadastro()">
+              Ainda não tem uma conta? <br />
+              CLIQUE AQUI
+            </p>
+          </section>
+        </div>
+
+        <div id="paraCadastro">
+          <div class="imgLogoLogin">
+            <img src="/imgs/logoCirculo.png" alt="logo" style="object-fit: contain;" width="450px" />
+            <p>Exotic Pets</p>
+          </div>
+
+          <section class="paraDados">
+            <div class="fecharLogin" onclick="loginShow()">
+              <span class="material-symbols-outlined"> close </span>
+            </div>
+            <input
+              type="text"
+              placeholder="Nome completo"
+              class="textoDados"
+              id="nome"
+            />
+            <input
+              type="text"
+              placeholder="E-mail"
+              class="textoDados"
+              id="email"
+            />
+            <input
+              type="password"
+              placeholder="Senha"
+              class="textoDados"
+              id="senha"
+            />
+
+            <label for="admin">Conta administrativa</label>
+            <input type="checkbox" id="admin" />
+            <div id="buttonSalvarConta" onclick="salvarLocalStorage()">
+              Cadastrar
+            </div>
+          </section>
+        </div>
+
+        <div id="buttonGoTop" onclick="goTop()">
+          <span class="material-symbols-outlined">
+            arrow_upward_alt
+            </span>
+        </div>
+        
+
+        <div id="pagesTransitions">
+          <ul>
+            <li><a href="/indexs/index_animalsPage.html">Animais</a></li>
+            <li><a href="/indexs/index_produtosPage.html">Produtos</a></li>
+            <li><a href=""></a>Feedbacks</li>
+          </ul>
+        </div>
+        <div id="introducaoProdutos">
+          <section>
+            <h2 class="title">
+              Exotic Pets: <br />
+              Especialistas em Animais Exóticos
+            </h2>
+            <br /><br />
+            <p style="font-size: 23px; text-decoration: underline; text-decoration-color: #bb8828;">Bem-vindo ao Exotic Pets! 🐾🦎🦜</p>  
+            <br><br>  
+            
+            <p>No <em>Exotic Pets</em>, entendemos que cuidar de animais exóticos é uma paixão única. Por isso, criamos um espaço dedicado a oferecer os melhores produtos e soluções para répteis, aves, anfíbios, pequenos mamíferos e muito mais!</p>  
+            <br><br>  
+            
+            <p>Aqui, você encontra desde alimentos especializados e ambientes customizados até acessórios e suplementos que atendem às necessidades específicas do seu pet. Tudo pensado para garantir saúde, conforto e bem-estar ao seu amigo exótico.</p>  
+            <br><br>  
+            
+            <p>🛒 <strong>Explore nosso site e descubra como oferecer o melhor para quem é tão especial!</strong></p>  
+            <br><br>
+            <p>
+          </section>
+          <div id="borda"><div alt="Aquário" title="Aquário"></div></div>
+        </div>
+
+        <span class="linhaHz"></span> 
+        <div id="buttonGoTop" onclick="goTop()">
+            <span class="material-symbols-outlined">
+              arrow_upward_alt
+              </span>
+          </div>
+
+          <section id="pesquisaEfiltro">
+            <h2 class="title" style="font-size: 50px;">Produtos</h2>
+            
+            <input type="text" id="pesquisa" placeholder="Ex:Serpentarium...">
+
+            <div  id="buttonPesquisar" onclick="pesquisar()"> Pesquisar</div>
+            <section id="paraFiltro">
+
+              <span class="material-symbols-outlined"style="font-size: 40px; cursor: pointer;" onclick="filtroShow() ">filter_list</span>
+          
+              <div id="guardarFiltro">
+                <p style="text-align: left;">Para:</p>
+                <input type="checkbox" class="filtroCheckbox" id="ave" value="Ave"> <label for="ave">Ave</label>
+                <input type="checkbox" class="filtroCheckbox" id="reptil" value="Reptil"> <label for="reptil">Reptil</label>
+                <input type="checkbox" class="filtroCheckbox" id="anfibio" value="Anfíbio"> <label for="anfibio">Anfíbio</label>
+                <input type="checkbox" class="filtroCheckbox" id="mamifero" value="Mamífero"> <label for="mamifero">Mamífero</label>
+                <div onclick="filtrar()">filtrar </div>
+    
+              </div>
+
+            </section>
+        
+          </section>
+        
+
+          <section id="areaProdutos">
+
+            <div class="card is-loading">
+              <div class="imageCard"></div>
+              <div class="conteudoCard">
+                <h2></h2>
+                <p></p>
+             
+              </div>
+            </div>
+
+          </section>
+
+          <span class="linhaHz"></span>
+
+        
+
+
+      </main>
+      <footer>Telefones: (99) 9999-9999 | (99) 8888-8888  -  E-mail: Exotic.pets@gmail.com | Exotic.pets.suporte@gmail.com </footer>
+
+    </div>
+    <script src="/scripts/scriptGoTop.js"></script>
+    <script src="/scripts/script_Cadastro.js"></script>
+    <script src="/scripts/script_ProdutosPage.js"></script>
+  </body>
+</html>

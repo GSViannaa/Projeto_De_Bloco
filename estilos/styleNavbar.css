@@ -1,0 +1,210 @@
+header {
+    padding: 10px;
+    display: flex;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 80px;
+    background: #000000;
+    font-size: 40px;
+    justify-content: center;
+    align-items: center;
+    
+  
+}
+header img {
+    margin-bottom: 12px;
+}
+header #buttonLogar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    margin-right: 30px;
+    right: 0;
+    height: 40px;
+    width: 70px;
+    border-radius: 50px;
+    background-color: #bb8828;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+
+header #dropdownMenu { 
+    color: #ad812e;
+    font-size: 18px;
+    display: none;
+    align-items: center;
+    position: fixed;
+    margin-right: 20px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    right: 0;
+    height: 40px;
+    width: 80px;
+    border-radius: 50px;
+   z-index: 9999;
+}
+
+#dropdownMenu ul {
+  
+    height: 100%;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    padding: 15px;
+    
+}
+
+.dropdownConteudo li {
+    margin: 10px;
+    cursor: pointer;
+    
+}
+.dropdownConteudo li:hover {
+    transform: scale(1.1);
+}
+
+#dropdownMenu .dropdownConteudo {
+    display: none;
+    color: #000;
+    width: 150px;
+    height: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    background-color:#bb8828;
+    position: fixed;
+    margin-top: 285px;
+    margin-left: 50px;
+    right: 0;
+    z-index: 9999;
+}
+
+
+#buttonLogar:hover {
+   transform: scale(1.1);
+}
+
+#page{
+    width: 100%;
+    height: 100vh;
+    background: #fdfdfd;
+    font-weight: 600;
+    color: #212121;
+}
+
+#navContainer {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    pointer-events: none;
+}
+#navContainer #bg {
+    margin-top: -1px;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    height: 200%;
+    visibility: hidden;
+    opacity: 0;
+    transition: .3s;
+    background: #000;
+}
+#navContainer:focus-within #bg {
+    visibility: visible;
+    opacity: .6;
+}
+
+#navContainer * {
+    visibility: visible;
+}
+
+.button {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 1;
+    appearance: none;
+    border: 0;
+    background: transparent;
+    border-radius: 0;
+    height: 70px;
+    width: 30px;
+    cursor: pointer;
+    pointer-events: auto;
+    margin-left: 25px;
+}
+
+.iconBar {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: #bb8828;;
+    transition: .3s;
+   
+}
+
+.iconBar + .iconBar {
+    margin-top: 5px;
+}
+
+#navContainer:focus-within .button {
+    pointer-events: none;
+}
+
+#navContainer:focus-within .iconBar:nth-of-type(1) {
+    transform: translate3d(0, 8px, 0) rotate(45deg);
+}
+#navContainer:focus-within .iconBar:nth-of-type(2) {
+    opacity: 0;
+}
+#navContainer:focus-within .iconBar:nth-of-type(3) {
+    transform: translate3d(0, -8px, 0) rotate(-45deg);
+}
+
+#contentNav {
+    margin-top: 80px;
+    padding: 20px;
+    width: 90%;
+    max-width: 300px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    background: #ececec;
+    pointer-events: auto;
+    transform: translateX(-100%);
+    transition: transform .3s;
+    will-change: transform;
+    contain: paint;
+}
+
+#contentNav ul {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+}
+
+#contentNav li {
+    font-size: 30px;
+    padding: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+#navContainer:focus-within #contentNav {
+    transform: none;
+}
+
